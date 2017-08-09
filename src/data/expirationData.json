@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "eggs",
+        "expirationDate": 1502236800000
+    },
+    {
+        "id": 2,
+        "name": "milk",
+        "expirationDate": 1503446400000
+    },
+    {
+        "id": 3,
+        "name": "bread",
+        "expirationDate": 1502928000000
+    },
+    {
+        "id": 4,
+        "name": "broccoli",
+        "expirationDate": 1503187200000
+    },
+    {
+        "id": 1,
+        "name": "peanut butter",
+        "expirationDate": 1510444800000
+    }
+]
