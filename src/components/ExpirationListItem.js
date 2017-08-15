@@ -1,5 +1,6 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { View, Text } from 'react-native';
+import PropTypes from 'prop-types';
 
 export default function ExpirationListItem({ expirationItem }) {
   return (
