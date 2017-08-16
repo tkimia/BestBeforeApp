@@ -1,12 +1,18 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+  },
+});
 
 export default function ExpirationListItem({ expirationItem }) {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>{expirationItem.name}</Text>
-      <Text>{expirationItem.daysLeft}</Text>
+      <Text>{expirationItem.daysLeft()}</Text>
     </View>
   );
 }
@@ -14,13 +20,13 @@ export default function ExpirationListItem({ expirationItem }) {
 ExpirationListItem.propTypes = {
   expirationItem: PropTypes.shape({
     name: PropTypes.string,
-    daysLeft: PropTypes.number,
+    daysLeft: PropTypes.func,
   }),
 };
 
 ExpirationListItem.defaultProps = {
   expirationItem: {
     name: '',
-    daysLeft: 0,
+    daysLeft: () => 0,
   },
 };

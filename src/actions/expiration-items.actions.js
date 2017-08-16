@@ -1,4 +1,5 @@
 import { getExpirationItems } from '../services/expiration-items.service';
+import ExpirationItem from '../models/expiration-item.model';
 
 export const GET_EXPIRATION_ITEMS_SUCCESS = 'GET_EXPIRATION_ITEMS_SUCCESS';
 export const GET_EXPIRATION_ITEMS_FAILURE = 'GET_EXPIRATION_ITEMS_FAILURE';
@@ -19,7 +20,7 @@ export function getExpirationItemsFailure(msg = null) {
 
 export function getExpirationItemsFromService() {
   return (dispatch) => {
-    const expirationItems = getExpirationItems();
+    const expirationItems = getExpirationItems().map(item => new ExpirationItem(item));
     dispatch(getExpirationItemsSuccess(expirationItems));
   };
 }
