@@ -14,13 +14,13 @@ export default function ExpirationListItem({ expirationItem }) {
 ExpirationListItem.propTypes = {
   expirationItem: PropTypes.shape({
     name: PropTypes.string,
-    daysLeft: PropTypes.string,
+    daysLeft: PropTypes.number,
   }),
 };
 
 ExpirationListItem.defaultProps = {
   expirationItem: {
     name: '',
-    daysLeft: '',
+    daysLeft: 0,
   },
 };

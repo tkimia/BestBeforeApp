@@ -30,9 +30,14 @@ class ExpirationItems extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  expirationItems: state.expirationItems,
-});
+const mapStateToProps = (state) => {
+  const expirationItems = state.expirationItems.map((item) => {
+    const daysLeft = Math.ceil((item.expirationDate - Date.now()) / (1000 * 3600 * 24));
+    return { ...item, daysLeft };
+  });
+
+  return { expirationItems };
+};
 
 const mapDispatchToProps = dispatchAction => ({
   getExpirationItems: () => dispatchAction(getExpirationItemsFromService()),
