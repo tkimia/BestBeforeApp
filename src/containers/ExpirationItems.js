@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import { connect } from 'react-redux';
 
 import { getExpirationItemsFromService } from '../actions/expiration-items.actions';
-import ExpirationList from '../components/ExpirationList';
+import { ExpirationList, Header } from '../components';
 
 class ExpirationItems extends Component {
   constructor(props) {
@@ -18,12 +18,13 @@ class ExpirationItems extends Component {
 
   renderContent() {
     console.log(this.props.expirationItems);
-    return <ExpirationList expirationItems={this.props.expirationItems} />;
+    return <ExpirationList style={{ flex: 1 }} expirationItems={this.props.expirationItems} />;
   }
 
   render() {
     return (
       <View style={{ flex: 1 }}>
+        <Header>Best Before</Header>
         { this.renderContent() }
       </View>
     );

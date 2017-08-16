@@ -12,12 +12,12 @@
     {
         "id": 3,
         "name": "bread",
-        "expirationDate": 1502928000000
+        "expirationDate": 1503187200000
     },
     {
         "id": 4,
         "name": "broccoli",
-        "expirationDate": 1503187200000
+        "expirationDate": 1502928000000
     },
     {
         "id": 5,
