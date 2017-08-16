@@ -7,7 +7,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: 5,
+    paddingLeft: 15,
+    paddingRight: 15,
+    paddingTop: 10,
   },
   name: {
     fontSize: 24,
@@ -18,7 +20,7 @@ const styles = StyleSheet.create({
     width: 30,
     height: 30,
     borderRadius: 30,
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: 'black',
   },
 });

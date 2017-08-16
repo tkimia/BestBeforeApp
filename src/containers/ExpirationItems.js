@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import { connect } from 'react-redux';
 
 import { getExpirationItemsFromService } from '../actions/expiration-items.actions';
-import { ExpirationList, Header } from '../components';
+import { ExpirationList, Header, FloatingButton } from '../components';
 
 class ExpirationItems extends Component {
   constructor(props) {
@@ -26,6 +26,7 @@ class ExpirationItems extends Component {
       <View style={{ flex: 1 }}>
         <Header>Best Before</Header>
         { this.renderContent() }
+        <FloatingButton>+</FloatingButton>
       </View>
     );
   }
